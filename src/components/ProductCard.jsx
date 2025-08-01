@@ -32,7 +32,7 @@ const ProductCard = ({ product, cart, setCart }) => {
   };
 
   return (
-    <div className="card bg-base-100 shadow-md">
+    <div className="bg-white rounded-lg shadow-md p-4">
       <figure className="p-4">
         <img
           src={product.image}
@@ -40,10 +40,10 @@ const ProductCard = ({ product, cart, setCart }) => {
           className="h-32 object-contain"
         />
       </figure>
-      <div className="card-body">
+      <div className="card-body bg-orange-100 text-black">
         <h2 className="card-title text-sm">{product.title}</h2>
         <p className="text-lg font-bold">{formatCurrency(product.price)}</p>
-        <p className="text-xs text-gray-500 capitalize">{product.category}</p>
+        <p className="text-xs  capitalize">{product.category}</p>
         <div className="card-actions justify-end mt-2">
           {quantity > 0 ? (
             <div className="flex items-center gap-2">
